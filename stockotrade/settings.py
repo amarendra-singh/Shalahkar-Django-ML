@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'portfolio',
+    'rest_framework_swagger'
 ]
 
 MIDDLEWARE = [

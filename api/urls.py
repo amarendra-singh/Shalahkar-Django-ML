@@ -1,9 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
-from core.views import HelloWorldView, stock
+from rest_framework.routers import DefaultRouter
+
+
 
 urlpatterns = [
-    path('home', HelloWorldView.as_view()),
-    path('stock/', stock, name='stock'),
+    path('core/', include('core.urls')),  
+
+    path('portfolio/', include('portfolio.urls'))
 
 ]
